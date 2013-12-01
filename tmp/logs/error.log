@@ -659,3 +659,297 @@ Stack Trace:
 #5 /opt/anvil/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(GradesController), Object(CakeRequest), Object(CakeResponse))
 #6 /opt/anvil/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #7 {main}
+2013-12-01 02:49:26 Error: [MissingDatasourceConfigException] The datasource configuration "test" was not found in database.php
+Exception Attributes: array (
+  'config' => 'test',
+)
+Stack Trace:
+#0 /opt/anvil/lib/Cake/Model/ConnectionManager.php(91): ConnectionManager::_getConnectionObject('test')
+#1 /opt/anvil/lib/Cake/TestSuite/Fixture/CakeFixtureManager.php(92): ConnectionManager::getDataSource('test')
+#2 /opt/anvil/lib/Cake/TestSuite/Fixture/CakeFixtureManager.php(71): CakeFixtureManager->_initDb()
+#3 /opt/anvil/lib/Cake/TestSuite/CakeTestRunner.php(55): CakeFixtureManager->fixturize(Object(BehaviorCollectionTest))
+#4 /opt/anvil/lib/Cake/TestSuite/CakeTestSuiteCommand.php(95): CakeTestRunner->doRun(Object(CakeTestSuite), Array)
+#5 /opt/anvil/lib/Cake/TestSuite/CakeTestSuiteDispatcher.php(243): CakeTestSuiteCommand->run(Array)
+#6 /opt/anvil/lib/Cake/TestSuite/CakeTestSuiteDispatcher.php(96): CakeTestSuiteDispatcher->_runTestCase()
+#7 /opt/anvil/lib/Cake/TestSuite/CakeTestSuiteDispatcher.php(113): CakeTestSuiteDispatcher->dispatch()
+#8 /opt/anvil/app/webroot/test.php(98): CakeTestSuiteDispatcher::run()
+#9 {main}
+2013-12-01 02:49:32 Error: [MissingDatasourceConfigException] The datasource configuration "test" was not found in database.php
+Exception Attributes: array (
+  'config' => 'test',
+)
+Stack Trace:
+#0 /opt/anvil/lib/Cake/Model/ConnectionManager.php(91): ConnectionManager::_getConnectionObject('test')
+#1 /opt/anvil/lib/Cake/TestSuite/Fixture/CakeFixtureManager.php(92): ConnectionManager::getDataSource('test')
+#2 /opt/anvil/lib/Cake/TestSuite/Fixture/CakeFixtureManager.php(71): CakeFixtureManager->_initDb()
+#3 /opt/anvil/lib/Cake/TestSuite/CakeTestRunner.php(55): CakeFixtureManager->fixturize(Object(ToolbarHelperTestCase))
+#4 /opt/anvil/lib/Cake/TestSuite/CakeTestSuiteCommand.php(95): CakeTestRunner->doRun(Object(AllDebugKitTest), Array)
+#5 /opt/anvil/lib/Cake/TestSuite/CakeTestSuiteDispatcher.php(243): CakeTestSuiteCommand->run(Array)
+#6 /opt/anvil/lib/Cake/TestSuite/CakeTestSuiteDispatcher.php(96): CakeTestSuiteDispatcher->_runTestCase()
+#7 /opt/anvil/lib/Cake/TestSuite/CakeTestSuiteDispatcher.php(113): CakeTestSuiteDispatcher->dispatch()
+#8 /opt/anvil/app/webroot/test.php(98): CakeTestSuiteDispatcher::run()
+#9 {main}
+2013-12-01 02:50:55 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /admin/
+Stack Trace:
+#0 /opt/anvil/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-01 03:01:40 Error: [MissingActionException] Action Users::login() could not be found.
+Exception Attributes: array (
+  'controller' => 'Users',
+  'action' => 'login',
+)
+Request URL: /users/login
+Stack Trace:
+#0 /opt/anvil/lib/Cake/Controller/Scaffold.php(151): Scaffold->_scaffold(Object(CakeRequest))
+#1 /opt/anvil/lib/Cake/Controller/Controller.php(535): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 /opt/anvil/lib/Cake/Controller/Controller.php(494): Controller->_getScaffold(Object(CakeRequest))
+#3 /opt/anvil/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#4 /opt/anvil/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#5 /opt/anvil/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2013-12-01 03:02:25 Error: [MissingViewException] View file "/opt/anvil/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/anvil/app/View/Users/login.ctp',
+)
+Request URL: /users/login
+Stack Trace:
+#0 /opt/anvil/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /opt/anvil/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /opt/anvil/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/anvil/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/anvil/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-01 03:03:45 Error: Fatal Error (1): Call to a member function login() on a non-object in [/opt/anvil/app/Controller/UsersController.php, line 26]
+2013-12-01 03:03:45 Error: [FatalErrorException] Call to a member function login() on a non-object
+Request URL: /users/login
+Stack Trace:
+#0 /opt/anvil/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/anvil/app/...', 26)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/anvil/app/...', 26, Array)
+#2 /opt/anvil/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/anvil/app/...', 26, Array)
+#3 /opt/anvil/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-01 03:11:17 Error: [MissingActionException] Action Users::admin_login() could not be found.
+Exception Attributes: array (
+  'controller' => 'Users',
+  'action' => 'admin_login',
+)
+Request URL: /admin/users/login
+Stack Trace:
+#0 /opt/anvil/lib/Cake/Controller/Scaffold.php(151): Scaffold->_scaffold(Object(CakeRequest))
+#1 /opt/anvil/lib/Cake/Controller/Controller.php(535): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 /opt/anvil/lib/Cake/Controller/Controller.php(494): Controller->_getScaffold(Object(CakeRequest))
+#3 /opt/anvil/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#4 /opt/anvil/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#5 /opt/anvil/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2013-12-01 03:11:31 Error: [MissingActionException] Action Users::admin_login() could not be found.
+Exception Attributes: array (
+  'controller' => 'Users',
+  'action' => 'admin_login',
+)
+Request URL: /admin/users/login
+Stack Trace:
+#0 /opt/anvil/lib/Cake/Controller/Scaffold.php(151): Scaffold->_scaffold(Object(CakeRequest))
+#1 /opt/anvil/lib/Cake/Controller/Controller.php(535): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 /opt/anvil/lib/Cake/Controller/Controller.php(494): Controller->_getScaffold(Object(CakeRequest))
+#3 /opt/anvil/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#4 /opt/anvil/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#5 /opt/anvil/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2013-12-01 03:12:15 Error: [MissingViewException] View file "/opt/anvil/app/View/Users/admin_login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/anvil/app/View/Users/admin_login.ctp',
+)
+Request URL: /admin/users/login
+Stack Trace:
+#0 /opt/anvil/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /opt/anvil/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /opt/anvil/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/anvil/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/anvil/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-01 03:24:19 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [/opt/anvil/app/Controller/Component/Auth/AnvilAuthenticate.php, line 7]
+2013-12-01 03:24:19 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /admin/users/login
+Stack Trace:
+#0 /opt/anvil/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/anvil/app/...', 7)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/anvil/app/...', 7, Array)
+#2 /opt/anvil/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/anvil/app/...', 7, Array)
+#3 /opt/anvil/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-01 03:25:27 Error: [MissingControllerException] Controller class LogoutController could not be found.
+Exception Attributes: array (
+  'class' => 'LogoutController',
+  'plugin' => NULL,
+)
+Request URL: /admin/logout
+Stack Trace:
+#0 /opt/anvil/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-01 03:25:36 Error: [MissingActionException] Action Users::admin_logout() could not be found.
+Exception Attributes: array (
+  'controller' => 'Users',
+  'action' => 'admin_logout',
+)
+Request URL: /admin/users/logout
+Stack Trace:
+#0 /opt/anvil/lib/Cake/Controller/Scaffold.php(151): Scaffold->_scaffold(Object(CakeRequest))
+#1 /opt/anvil/lib/Cake/Controller/Controller.php(535): Scaffold->__construct(Object(UsersController), Object(CakeRequest))
+#2 /opt/anvil/lib/Cake/Controller/Controller.php(494): Controller->_getScaffold(Object(CakeRequest))
+#3 /opt/anvil/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#4 /opt/anvil/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#5 /opt/anvil/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2013-12-01 03:34:57 Error: [MissingViewException] View file "/opt/anvil/app/View/Users/xml/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/anvil/app/View/Users/xml/login.ctp',
+)
+Request URL: /users/login.xml
+Stack Trace:
+#0 /opt/anvil/lib/Cake/View/XmlView.php(103): View->_getViewFileName(NULL)
+#1 /opt/anvil/lib/Cake/Controller/Controller.php(952): XmlView->render(NULL, NULL)
+#2 /opt/anvil/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/anvil/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/anvil/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-01 03:35:04 Error: [MissingViewException] View file "/opt/anvil/app/View/Users/json/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/anvil/app/View/Users/json/login.ctp',
+)
+Request URL: /users/login.json
+Stack Trace:
+#0 /opt/anvil/lib/Cake/View/JsonView.php(107): View->_getViewFileName(NULL)
+#1 /opt/anvil/lib/Cake/Controller/Controller.php(952): JsonView->render(NULL, NULL)
+#2 /opt/anvil/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/anvil/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/anvil/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-01 03:36:26 Error: [MissingViewException] View file "/opt/anvil/app/View/Users/json/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/anvil/app/View/Users/json/login.ctp',
+)
+Request URL: /users/login.json
+Stack Trace:
+#0 /opt/anvil/lib/Cake/View/JsonView.php(107): View->_getViewFileName(NULL)
+#1 /opt/anvil/lib/Cake/Controller/Controller.php(952): JsonView->render(NULL, NULL)
+#2 /opt/anvil/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/anvil/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/anvil/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-01 03:37:00 Error: [MissingViewException] View file "/opt/anvil/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/anvil/app/View/Users/login.ctp',
+)
+Request URL: /users/login
+Stack Trace:
+#0 /opt/anvil/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /opt/anvil/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /opt/anvil/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/anvil/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/anvil/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-01 03:37:56 Error: [MissingViewException] View file "/opt/anvil/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/anvil/app/View/Users/login.ctp',
+)
+Request URL: /users/login
+Stack Trace:
+#0 /opt/anvil/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /opt/anvil/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /opt/anvil/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/anvil/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/anvil/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-01 03:38:09 Error: [MissingViewException] View file "/opt/anvil/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/anvil/app/View/Users/login.ctp',
+)
+Request URL: /users/login
+Stack Trace:
+#0 /opt/anvil/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /opt/anvil/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /opt/anvil/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/anvil/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/anvil/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-01 03:38:21 Error: [MissingViewException] View file "/opt/anvil/app/View/Users/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/anvil/app/View/Users/login.ctp',
+)
+Request URL: /users/login
+Stack Trace:
+#0 /opt/anvil/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /opt/anvil/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /opt/anvil/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/anvil/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/anvil/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-01 03:41:24 Error: [XmlException] Invalid input.
+Request URL: /users/logout.xml
+Stack Trace:
+#0 /opt/anvil/lib/Cake/View/XmlView.php(137): Xml::fromArray('OK', Array)
+#1 /opt/anvil/lib/Cake/View/XmlView.php(101): XmlView->_serialize('result')
+#2 /opt/anvil/lib/Cake/Controller/Controller.php(952): XmlView->render(NULL, NULL)
+#3 /opt/anvil/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#4 /opt/anvil/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#5 /opt/anvil/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2013-12-01 03:41:41 Error: [MissingViewException] View file "/opt/anvil/app/View/Users/xml/login.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/anvil/app/View/Users/xml/login.ctp',
+)
+Request URL: /users/login.xml
+Stack Trace:
+#0 /opt/anvil/lib/Cake/View/XmlView.php(103): View->_getViewFileName(NULL)
+#1 /opt/anvil/lib/Cake/Controller/Controller.php(952): XmlView->render(NULL, NULL)
+#2 /opt/anvil/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/anvil/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/anvil/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-01 03:42:11 Error: [XmlException] Invalid input.
+Request URL: /users/logout.xml
+Stack Trace:
+#0 /opt/anvil/lib/Cake/View/XmlView.php(137): Xml::fromArray('OK', Array)
+#1 /opt/anvil/lib/Cake/View/XmlView.php(101): XmlView->_serialize('result')
+#2 /opt/anvil/lib/Cake/Controller/Controller.php(952): XmlView->render(NULL, NULL)
+#3 /opt/anvil/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#4 /opt/anvil/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#5 /opt/anvil/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2013-12-01 03:58:53 Error: Fatal Error (1): Call to a member function findByUsername() on a non-object in [/opt/anvil/app/Controller/Component/Auth/AnvilAuthenticate.php, line 11]
+2013-12-01 03:58:53 Error: [FatalErrorException] Call to a member function findByUsername() on a non-object
+Request URL: /admin/users/login
+Stack Trace:
+#0 /opt/anvil/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/anvil/app/...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/anvil/app/...', 11, Array)
+#2 /opt/anvil/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/anvil/app/...', 11, Array)
+#3 /opt/anvil/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-01 04:06:40 Error: Fatal Error (4): syntax error, unexpected ';' in [/opt/anvil/app/Controller/Component/Auth/AnvilAuthenticate.php, line 9]
+2013-12-01 04:06:40 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /admin/users/login
+Stack Trace:
+#0 /opt/anvil/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/anvil/app/...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/anvil/app/...', 9, Array)
+#2 /opt/anvil/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/anvil/app/...', 9, Array)
+#3 /opt/anvil/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-01 04:07:15 Error: Fatal Error (1): Call to a member function setFlash() on a non-object in [/opt/anvil/app/Controller/UsersController.php, line 46]
+2013-12-01 04:07:15 Error: [FatalErrorException] Call to a member function setFlash() on a non-object
+Request URL: /admin/users/login
+Stack Trace:
+#0 /opt/anvil/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/anvil/app/...', 46)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/anvil/app/...', 46, Array)
+#2 /opt/anvil/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/anvil/app/...', 46, Array)
+#3 /opt/anvil/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

@@ -33,7 +33,20 @@ class AppController extends Controller {
     public $scaffold = 'admin';
     public $M = null;
 
-    public $components = array('RequestHandler', 'DebugKit.Toolbar');
+    public $components = array(
+    	'RequestHandler', 
+    	'Session', 
+    	'DebugKit.Toolbar',
+    	'Auth'
+    );
+
+    public function beforeFilter() {
+    	$this->Auth->authenticate = array(
+    		AuthComponent::ALL => array('scope' => array('User.is_active' => 1)),
+    		'Anvil'
+    		);
+    	$this->Auth->allow('index');
+    }
 
     public function index() {
         $res = $this->M->find('all');
